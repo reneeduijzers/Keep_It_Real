@@ -1,0 +1,15 @@
+.NavBar {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 20px;
+}
+
+.NavBarLink {
+  color: black;
+  margin: 2em;
+}
+
+.active {
+  font-weight: bold;
+  color: red;
+}
