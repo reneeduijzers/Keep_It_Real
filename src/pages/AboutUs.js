@@ -13,9 +13,7 @@ export default function AboutUsPage() {
     async function doSomeDataFetching() {
       console.log("I'm gonna fetch some data!");
 
-      const res = await axios.get(
-        "https://my-json-server.typicode.com/Codaisseur/listings-agents-data/agents"
-      );
+      const res = await axios.get("http://localhost:4000/Aboutus");
 
       console.log("Got back:", res.data);
 

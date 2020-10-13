@@ -52,27 +52,25 @@ export default function HomePage() {
         />
       </div>
       <div>
-        <div classname="Side-center">
-          <button className="Button">
-            <Link className="ButtonLink" to="/listings">
-              {textButtonListings}
-            </Link>
-          </button>
-          <button className="Button">
-            <Link className="ButtonLink" to={url}>
-              {textButtonAboutUs}
-            </Link>
-          </button>
-          <select
-            className="Button"
-            onChange={(event) => set_language(event.target.value)}
-          >
-            <option value="English">English</option>
-            <option value="Dutch">Dutch</option>
-            <option value="German">German</option>
-            <option value="Spanish">Spanish</option>
-          </select>
-        </div>
+        <button className="Button">
+          <Link className="ButtonLink" to="/listings">
+            {textButtonListings}
+          </Link>
+        </button>
+        <button className="Button">
+          <Link className="ButtonLink" to={url}>
+            {textButtonAboutUs}
+          </Link>
+        </button>
+        <select
+          className="Button"
+          onChange={(event) => set_language(event.target.value)}
+        >
+          <option value="English">English</option>
+          <option value="Dutch">Dutch</option>
+          <option value="German">German</option>
+          <option value="Spanish">Spanish</option>
+        </select>
       </div>
     </div>
   );

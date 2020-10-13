@@ -13,7 +13,8 @@ export default function ListingDatabase() {
       console.log("I'm gonna fetch some data!");
 
       const res = await axios.get(
-        "https://my-json-server.typicode.com/Codaisseur/listings-agents-data/listings"
+        // "https://my-json-server.typicode.com/Codaisseur/listings-agents-data/listings"
+        "http://localhost:4000/listings"
       );
 
       console.log("Got back:", res.data);
