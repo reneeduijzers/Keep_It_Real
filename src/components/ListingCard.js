@@ -2,7 +2,6 @@ import React from "react";
 import "./ListingCard.css";
 
 export default function ListingCard(props) {
-  // console.log("What is props.address?", props.address);
   return (
     <div>
       <h2>
