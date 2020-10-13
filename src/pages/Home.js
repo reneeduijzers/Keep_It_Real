@@ -72,6 +72,7 @@ export default function HomePage() {
           <option value="Spanish">Spanish</option>
         </select>
       </div>
+      <div className="Footer"></div>
     </div>
   );
 }

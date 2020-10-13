@@ -13,7 +13,7 @@ export default function AboutUsPage() {
     async function doSomeDataFetching() {
       console.log("I'm gonna fetch some data!");
 
-      const res = await axios.get("http://localhost:4000/Aboutus");
+      const res = await axios.get("https://keep-it-real.herokuapp.com/aboutus");
 
       console.log("Got back:", res.data);
 
@@ -107,6 +107,7 @@ export default function AboutUsPage() {
           {textButtonScheduleViewing}
         </Link>
       </button>
+      <div className="Footer"></div>
     </div>
   );
 }

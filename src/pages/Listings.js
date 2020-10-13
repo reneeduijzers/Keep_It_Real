@@ -13,8 +13,7 @@ export default function ListingDatabase() {
       console.log("I'm gonna fetch some data!");
 
       const res = await axios.get(
-        // "https://my-json-server.typicode.com/Codaisseur/listings-agents-data/listings"
-        "http://localhost:4000/listings"
+        "https://keep-it-real.herokuapp.com/listings"
       );
 
       console.log("Got back:", res.data);
@@ -69,6 +68,7 @@ export default function ListingDatabase() {
         : sortedListings.map((listing) => {
             return <ListingCard key={listing.id} {...listing} />;
           })}
+      <div className="Footer"></div>
     </div>
   );
 }
