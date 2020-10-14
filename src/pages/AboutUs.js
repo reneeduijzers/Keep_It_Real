@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Title from "../components/Title";
+
 import { Link } from "react-router-dom";
 
 export default function AboutUsPage() {
@@ -67,36 +67,48 @@ export default function AboutUsPage() {
 
   return (
     <div>
-      <Title content="ABOUT US" />
-      {filteredAgents.length > 0
-        ? filteredAgents.map((agent) => {
-            return (
-              <ul key={agent.id}>
-                <h2>
-                  {agent.firstName} {agent.lastName}
-                </h2>
-                <p>
-                  <img src={agent.imageUrl} alt="agent" />
-                </p>
-                <p>{agent.motto}</p>
-                <p>{agent.email}</p>
-              </ul>
-            );
-          })
-        : agents.map((agent) => {
-            return (
-              <ul key={agent.id}>
-                <h2>
-                  {agent.firstName} {agent.lastName}
-                </h2>
-                <p>
-                  <img src={agent.imageUrl} alt="agent" />
-                </p>
-                <p>{agent.motto}</p>
-                <p>{agent.email}</p>
-              </ul>
-            );
-          })}
+      <div className="Text-block">
+        <h1>ABOUT US</h1>
+      </div>
+      <div className="Listing-block">
+        {filteredAgents.length > 0
+          ? filteredAgents.map((agent) => {
+              return (
+                <ul key={agent.id}>
+                  <h2>
+                    {agent.firstName} {agent.lastName}
+                  </h2>
+                  <p>
+                    <img
+                      className="Agent-pic"
+                      src={agent.imageUrl}
+                      alt="agent"
+                    />
+                  </p>
+                  <p style={{ fontStyle: "italic" }}>"{agent.motto}"</p>
+                  <p>e-mail: {agent.email}</p>
+                </ul>
+              );
+            })
+          : agents.map((agent) => {
+              return (
+                <ul key={agent.id}>
+                  <h2>
+                    {agent.firstName} {agent.lastName}
+                  </h2>
+                  <p>
+                    <img
+                      className="Agent-pic"
+                      src={agent.imageUrl}
+                      alt="agent"
+                    />
+                  </p>
+                  <p style={{ fontStyle: "italic" }}>"{agent.motto}"</p>
+                  <p>e-mail: {agent.email}</p>
+                </ul>
+              );
+            })}
+      </div>
       <button className="Button">
         <Link className="ButtonLink" to="/listings">
           {textButtonListings}

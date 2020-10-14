@@ -2,11 +2,18 @@
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   font-size: 20px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .NavBarLink {
   color: black;
   margin: 2em;
+  text-decoration: none;
 }
 
 .active {

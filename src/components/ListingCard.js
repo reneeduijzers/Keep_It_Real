@@ -1,5 +1,4 @@
 import React from "react";
-import "./ListingCard.css";
 
 export default function ListingCard(props) {
   return (

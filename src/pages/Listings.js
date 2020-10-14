@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Title from "../components/Title";
+
 import ListingCard from "../components/ListingCard";
 import axios from "axios";
 
@@ -40,34 +40,39 @@ export default function ListingDatabase() {
 
   return (
     <div>
-      <Title content="LISTING OVERVIEW" />
-      <div>
-        <label>budget: </label>
-        <input
-          type="range"
-          min="161000"
-          max="886000"
-          defaultValue="886000"
-          onChange={(event) => set_filter_byPrice(event.target.value)}
-        />
+      <div className="Text-block">
+        <h1>AVAILABLE PROPERTIES</h1>
       </div>
-      <div>
-        <label>floor space: </label>
-        <input
-          type="range"
-          min="44"
-          max="103"
-          defaultValue="41"
-          onChange={(event) => set_filter_bySpace(event.target.value)}
-        />
+
+      <div className="Outer-container">
+        <div className="Inner-container">
+          <label>budget: </label>
+          <input
+            type="range"
+            min="161000"
+            max="886000"
+            defaultValue="886000"
+            onChange={(event) => set_filter_byPrice(event.target.value)}
+          />
+          <label>floor space: </label>
+          <input
+            type="range"
+            min="44"
+            max="103"
+            defaultValue="41"
+            onChange={(event) => set_filter_bySpace(event.target.value)}
+          />
+        </div>
       </div>
-      {filteredListings.length > 0
-        ? filteredListings.map((listing) => {
-            return <ListingCard key={listing.id} {...listing} />;
-          })
-        : sortedListings.map((listing) => {
-            return <ListingCard key={listing.id} {...listing} />;
-          })}
+      <div className="Listing-block">
+        {filteredListings.length > 0
+          ? filteredListings.map((listing) => {
+              return <ListingCard key={listing.id} {...listing} />;
+            })
+          : sortedListings.map((listing) => {
+              return <ListingCard key={listing.id} {...listing} />;
+            })}
+      </div>
       <div className="Footer"></div>
     </div>
   );

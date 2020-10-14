@@ -3,3 +3,92 @@ body {
   background-color: whitesmoke;
   color: black;
 }
+
+.Header {
+  height: 100px;
+  background-color: lightgrey;
+  position: relative;
+}
+
+.Footer {
+  height: 125px;
+  background-color: black;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+}
+
+.Button {
+  background-color: rgb(212, 212, 212);
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-size: 20px;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  border: 0.1px solid #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.ButtonLink {
+  color: black;
+  text-decoration: none;
+}
+
+.Text-block {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Select {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.VerticalForest {
+  height: 40%;
+  width: 40%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.Agent-pic {
+  height: 30%;
+  width: 30%;
+}
+
+.Outer-container {
+  height: 25px;
+  position: relative;
+}
+
+.Inner-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Listing-block {
+  margin-left: 5%;
+  margin-top: 25px;
+}
+
+.Listing-block-schedule {
+  margin-left: 5%;
+  margin-top: 25px;
+  height: 500px;
+}
